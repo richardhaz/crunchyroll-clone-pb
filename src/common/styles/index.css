@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+body {
+  background-color: #000;
+}
+
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  font-family: Lato, Helvetica Neue, helvetica, sans-serif;
+  font-weight: 400;
+  height: 100%;
+  overflow-anchor: none;
+}
+
+.ReactCollapse--collapse {
+  transition: height 300ms;
+}
+
+@layer components {
+  .use-text-transition {
+    @apply transition-colors delay-75 ease-in-out;
+  }
+  .use-transition {
+    @apply transition-colors delay-75 ease-in-out;
+  }
+  .use-container {
+    @apply container px-4 md:px-10;
+  }
+}
+
+.inset-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
+.footer-container {
+  background: #000 linear-gradient(180deg, #0000, #213944);
+}
+
+/* Prev button style */
+.swiper-button-prev {
+  background-color: black;
+  width: 40px !important;
+  height: 40px !important;
+  left: 0 !important;
+  top: 35% !important;
+}
+
+.swiper-button-prev.swiper-button-disabled {
+  display: none !important;
+}
+
+.swiper-button-prev:after {
+  font-size: 16px !important;
+  color: #fff;
+  font-weight: 900;
+}
+
+/* Next button style */
+.swiper-button-next {
+  background-color: #23252b;
+  width: 40px !important;
+  height: 40px !important;
+  right: 0 !important;
+  top: 35% !important;
+}
+
+.swiper-button-next.swiper-button-disabled {
+  display: none !important;
+}
+
+.swiper-button-next:after {
+  font-size: 16px !important;
+  color: #fff;
+  font-weight: 900;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
